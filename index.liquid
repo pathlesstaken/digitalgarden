@@ -1,12 +1,12 @@
 ---
-title: Road Less Taken
+title: Pascal's Garden
 layout: main
 ---
 
 <h2>Digital Garden</h2>
-List of posts here, newest first...
-{% for post in collections.posts %}
-    <p>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-    </p>
+{% assign posts = collections.posts | reverse %}
+{% for post in posts limit:5 %}
+	<p>
+	<a href="{{ post.url }}">{{ post.data.title }}</a> <i>(written {{ post.date | date: "%b %d, %Y"}})</i>
+	</p>
 {% endfor %}

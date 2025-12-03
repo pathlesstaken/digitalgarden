@@ -1,17 +1,32 @@
 ---
-title: Road Less Taken
+title: Pascal's Garden
+date: 2025
 ---
+<!DOCTYPE html>
 <html>
 <head>
-<title>{{ title }}</title>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/style/app.css">
 </head>
 <body>
-    <div class="header">
+<header>
+    <h1>Pascal's Garden</h1>
+</header>
+<nav>
     <a href="/">Home</a>
-    <h1>Road Less Taken</h1>
-    </div>
-    <div class="content">
-    {{ content }}
-    </div>
+    <a href="/archives">Archives</a>
+    <a href="/about">About</a>
+</nav>
+
+<main>
+	{{ content }}
+</main>
+
+<footer>
+    <p>
+    Created by {{ site.author.name }}, follow me on <a href="https://instagram.com/{{site.author.twitter}}">Instagram</a>. 
+    <i>Copyright &copy; {{ page.date | justYear }}</i>
+    </p>
+</footer>
 </body>
 </html>
